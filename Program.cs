@@ -18,13 +18,14 @@ namespace ReactionDiffusion
             //reaction diffusion algorithm controller
             ReactionDiffusionController cntrl = new ReactionDiffusionController(width, height, KillRate, FeedRate, dA, dB);
             cntrl.AssignBvalues(8, 12, 8, 18);
-            for (int i = 0; i < 2; i++)
-            {
-                cntrl.Run(width, height);
+            ReactionDiffusionController temp = cntrl;
+            // for (int i = 0; i < 2; i++)
+            // {
+            //     temp.Run(width, height);
 
-                Console.WriteLine("controller diffusiont test:{0}", cntrl.KillRate);
-                Console.WriteLine("Cell value:{0}", cntrl.Grid[2, 2].A);
-            }
+            //     Console.WriteLine("controller diffusiont test:{0}", cntrl.KillRate);
+            //     Console.WriteLine("Cell value:{0}", cntrl.Grid[2, 2].A);
+            // }
 
 
             //string format to export .text file for grasshopper
